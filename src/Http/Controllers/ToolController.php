@@ -12,10 +12,10 @@ class ToolController extends Controller
             [
                 "component" => "text-field",
                 "prefixComponent" => true,
-                "indexName" => "Name",
-                "name" => "Name",
-                "attribute" => "name",
-                "value" => auth()->user()->name,
+                "indexName" => "First name",
+                "name" => "First name",
+                "attribute" => "first_name",
+                "value" => auth()->user()->first_name,
                 "panel" => null,
                 "sortable" => false,
                 "textAlign" => "left"
@@ -23,8 +23,19 @@ class ToolController extends Controller
             [
                 "component" => "text-field",
                 "prefixComponent" => true,
-                "indexName" => "E-mailaddress",
-                "name" => "E-mailaddress",
+                "indexName" => "Last name",
+                "name" => "Last name",
+                "attribute" => "last_name",
+                "value" => auth()->user()->last_name,
+                "panel" => null,
+                "sortable" => false,
+                "textAlign" => "left"
+            ],
+            [
+                "component" => "text-field",
+                "prefixComponent" => true,
+                "indexName" => "E-mail",
+                "name" => "E-mail",
                 "attribute" => "email",
                 "value" => auth()->user()->email,
                 "panel" => null,
